@@ -4,7 +4,7 @@
 $ mkdir ex04
 $ cd ex04
 $ npm init -y
-$ npm i -D webpack webpack-cli webpack-dev-server
+$ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader
 ```
 2. 프로젝트 구조
     <pre>
@@ -16,6 +16,9 @@ $ npm i -D webpack webpack-cli webpack-dev-server
         |       |--- index.html
         |       |--- bundle.js
         |--- src
+        |       |--- assets
+        |       |       |--- Common.css
+        |       |       |--- App.css
         |       |--- index.js
         |       |--- App.js
         |--- webpack.config.js [webpack 설정 파일]
@@ -31,6 +34,12 @@ module.exports = {
         path: path.resolve('public'),
         filename: 'bundle.js'
     },
+    module: {
+        rules: [{
+            test: /\.css$/i,
+            use:['style-loader', 'css-loader']
+        }]
+    },    
     devServer: {
         contentBase: path.resolve('public'),
         host: "0.0.0.0",
