@@ -3,7 +3,7 @@ import React from 'react';
 const App = function() {
     const message = 'Hello Wolrd';
     return (
-        <div>
+        <div className="App">
             <h1>{message}</h1>
         </div>
     );
