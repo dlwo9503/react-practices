@@ -7,18 +7,13 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            }, {
-                test: /\.js$/i,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            }]
+        rules: [{
+            test: /\.css$/i,
+            use: [
+                'style-loader', 
+                {loader: 'css-loader', options: { module: true } }
+            ]
+        }]
     },
     devServer: {
         contentBase: path.resolve('public'),

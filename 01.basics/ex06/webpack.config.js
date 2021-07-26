@@ -7,20 +7,18 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        rules: [{
-            test: /\.css$/i,
-            use:['style-loader', 'css-loader']
-        }, {
-            test: /\.s[ac]ss$/i,
-            use: ['style-loader', 'css-loader', 'sass-loader']
-        }, {
-            test: /\.svg$/i,
-            loader: 'file-loader',
-            options: {
-                outputPath: '/assets/images',
-                name: '[name].[ext]'
-            }
-        }]
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader', 
+                    {loader: 'css-loader', options: { module: true } }
+                ]
+            }, {
+                test: /\.js$/i,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            }]
     },
     devServer: {
         contentBase: path.resolve('public'),
