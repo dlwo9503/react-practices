@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dev-server.mjs",
-    "build": "npx webpack ./src/index.js - o ./public"
+    "debug": "node dev-server.mjs",
+    "build": "npx webpack ./src/index.js -o ./public"
   },
   "keywords": [],
   "author": "",
