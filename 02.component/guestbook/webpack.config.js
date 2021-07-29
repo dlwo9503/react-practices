@@ -44,6 +44,6 @@ module.exports  = () => {
       hot: false,
       compress: true,
       historyApiFallback: true,
-    },
+    }
   };
 };

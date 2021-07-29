@@ -1,4 +1,5 @@
 import './assets/scss/App.scss';
+
 const App = function(){
     const app = document.createElement('h1');
     app.className = 'Header';
