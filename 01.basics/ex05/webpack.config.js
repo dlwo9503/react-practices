@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'none',
+    mode: "none",
     entry: path.resolve('src/index.js'),
     output: {
         path: path.resolve('public'),
@@ -18,5 +18,5 @@ module.exports = {
         hot: false,
         compress: true,
         historyApiFallback: true
-    }
+    } }
 }

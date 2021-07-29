@@ -1,11 +1,8 @@
 import React from 'react';
-import Guestbook from './Guestbook'
-import styles from'../public/styles.css';
+import Guestbook from './Guestbook';
 
 export default function App() {
     return (
-        <div className={styles.App}>
-            <Guestbook />
-        </div>
+        <Guestbook />
     );
 }
