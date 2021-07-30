@@ -2,13 +2,18 @@ import React, {Fragment} from 'react';
 
 export default function App() {
 
-    const onChangeMessageInput = function(event) {
-        console.log(event.target.name, ':', event.target.value);
+    const onChangeMessageInput = function(e) {
+        console.log(e.target.name, ':', e.target.value);
     }
 
-    const onAddFormSubmit = function(event) {
-        event.preventDefault();
-        console.log(event.target.name, ':', 'Ajax로 등록할 겁니다.');
+    const onAddFormSubmit = function(e) {
+        e.preventDefault(); // 막음
+        console.log(
+            e.target.name, 
+            ":", 
+            e.target.message.value, 
+            ":", 
+            "Ajax 방식의 등록작업을 해야 합니다.");
     }
 
     return (
@@ -22,11 +27,13 @@ export default function App() {
                 name='addForm'
                 method='post'
                 action='/do/not/go'
+                onSubmit={ onAddFormSubmit }
                 >
                 <input
                     type='text'
                     name='message'
-                    placeholder='메세지를 입력 하세요'
+                    placeholder='메세지를 입력 하세요' // 미리나오는 메세지
+                    onChange={ onChangeMessageInput }
                     />
                 <br/>
                 <br/>
