@@ -11,7 +11,7 @@ export default function App() {
             <div
                 ref={ innerRef }>
                 <ul>
-                    { Array.from({length: 100}, (_, i) => i+1).map(i =>
+                    { Array.from({length: 100}, (_, i) => i).map(i =>
                         <li>
                             { `아이템 ${i} 입니다.` }
                         </li>
