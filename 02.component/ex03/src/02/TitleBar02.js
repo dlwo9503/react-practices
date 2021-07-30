@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function TitelBar02() {
-
+    const [no, setNo] = useState(10);
+    const onClickHeader = (e) => {
+        console.log('TitelBar02 click!!')
+        setNo(no + 1);
+    }
 
     return (
-
+        <h1 onClick={ onClickHeader }
+            style = { { 
+                cursor: 'pointer'
+            } } >
+            ex03 - Functional Event Handler (Functional Component) { no }
+        </h1>
     )
 }
