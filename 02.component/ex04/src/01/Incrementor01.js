@@ -14,17 +14,23 @@ export default class extends Component {
         });
     }
 
+    onClickButton2() {
+        this.setState({
+            value: this.state.value - this.props.step
+        });
+    }
+
     render() {
         return (
             <div>
-                <button onClick={ this.onClickButton.bind(this) }>
-                    <strong>+</strong>
+                <button onClick={ this.onClickButton2.bind(this) }>
+                    <strong>-</strong>
                 </button>
                 { ' ' }
                 <span>{ this.state.value }</span>
                 { ' ' }
                 <button onClick={ this.onClickButton.bind(this) }>
-                    <strong>-</strong>
+                    <strong>+</strong>
                 </button>
             </div>
         )

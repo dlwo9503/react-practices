@@ -7,16 +7,20 @@ export default function({begin, step}) {
         setValue(value + step);
     }
 
+    const onClickButton2 = function() {
+        setValue(value - step);
+    }
+
     return (
         <div>
-            <button onClick={ onClickButton }>
-                <strong>+</strong>
+            <button onClick={ onClickButton2 }>
+                <strong>-</strong>
             </button>
             { ' ' }
             <span>{ value }</span>
             { ' ' }
             <button onClick={ onClickButton }>
-                <strong>-</strong>
+                <strong>+</strong>
             </button>
         </div>
     )
