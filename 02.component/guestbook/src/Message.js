@@ -9,8 +9,7 @@ export default function Message({ name, message }) {
             <p>
                 { message && message.split('\n').map((line, index) => index > 0 ?
                     <Fragment key={index}>
-                        <br/>
-                        { line }
+                        <br/>{ line }
                     </Fragment> : line) }
             </p>
             <strong></strong>

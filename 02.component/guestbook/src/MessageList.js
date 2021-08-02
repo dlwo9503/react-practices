@@ -8,10 +8,8 @@ export default function MessageList({ messages }) {
         <ul className={ styles.Guestbook__List }>
             {  messages.map(message => <Message key={ message.no }
                                                 name={ message.name }
-                                                message={message.message}/>) }
+                                                message={message.message}/>)}
         </ul>
-
-        
     );
 }
 
