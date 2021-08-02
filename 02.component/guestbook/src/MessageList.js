@@ -14,5 +14,5 @@ export default function MessageList({ messages }) {
 }
 
 MessageList.propTypes = {
-    message: PropTypes.arrayOf(PropTypes.object).isRequired
+    messages: PropTypes.arrayOf(PropTypes.object).isRequired
 }
