@@ -7,8 +7,11 @@ export default function App() {
     const innerRef = useRef(null);
 
     const onScroll = (e) => {
+        console.log(outterRef.current.scrollTop); // 위쪽에 있는 높이
+        console.log(outterRef.current.clientHeight); // 보이는 화면의 높이
+        console.log(innerRef.current.clientHeight); // 안쪽의 화면 높이
         if(outterRef.current.scrollTop + outterRef.current.clientHeight >= innerRef.current.clientHeight) {
-            console.log("fetch");
+            console.log("Fetch!!!");
         }
     };
     
