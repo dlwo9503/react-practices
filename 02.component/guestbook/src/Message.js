@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import PropTypes from 'prop-types';
 import styles from './assets/scss/Guestbook__List__Item.scss';
 
 export default function Message({ name, message }) {
@@ -16,4 +17,9 @@ export default function Message({ name, message }) {
             <a href=''>삭제</a>
         </li>
     );
+}
+
+Message.propTypes = {
+    name: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired
 }

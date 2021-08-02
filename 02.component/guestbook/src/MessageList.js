@@ -1,5 +1,6 @@
 import React from 'react';
 import Message from './Message';
+import PropTypes from 'prop-types';
 import styles from './assets/css/Guestbook__List.css';
 
 export default function MessageList({ messages }) {
@@ -12,4 +13,8 @@ export default function MessageList({ messages }) {
 
         
     );
+}
+
+MessageList.propTypes = {
+    message: PropTypes.arrayOf(PropTypes.object).isRequired
 }
