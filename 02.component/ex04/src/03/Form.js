@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import './assets/Form.css';
 
 export default function Form() {
-    const onSubmit = function(e){
+    const onSubmit = function (e) {
         e.preventDefault();
         console.log(e.target.email.value, ":", e.target.password.value);
     }
     return (
-        <form 
-            id="loginForm" 
-            name="loginForm" 
-            method="post" 
+        <form
+            id="loginForm"
+            name="loginForm"
+            method="post"
             action="/do/not/post"
-            onSubmit={ onSubmit }>
+            onSubmit={onSubmit}>
             <label htmlFor="email">이메일</label>
-            <input 
-                id="email" 
-                name="email" 
+            <input
+                id="email"
+                name="email"
                 type="text" />
 
             <label htmlFor="password">패스워드</label>
