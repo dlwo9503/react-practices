@@ -1,28 +1,17 @@
 import React from 'react';
+import Email from './Email';
 
-export default function Emaillist(params){
+export default function Emaillist( { emails } ){
     return (
-        <ul class="Emaillist">
-            <li>
-                둘리
-                <br/>
-                dooly@gmail.com
-            </li>
-            <li>
-                마이콜
-                <br/>
-                michol@gmail.com
-            </li>
-            <li>
-                도우너
-                <br/>
-                douner@gmail.com
-            </li>
-            <li>
-                또치
-                <br/>
-                ddochi@gmail.com
-            </li>
+        <ul className="Emaillist">
+            { 
+                emails.map(item => <Email 
+                    key={ item.no } 
+                    firstName={ item.firstName }
+                    lastName={ item.lastName }
+                    email={ item.email }
+                    />)
+            }
         </ul>
     );
 }
