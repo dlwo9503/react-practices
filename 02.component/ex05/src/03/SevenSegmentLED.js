@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Fragment } from "react";
+import * as PropTypes from "prop-types";
+import styles from './assets/scss/SevenSegmentLED.scss'
 
-export default function SevenSegmentLED() {
+export default function SevenSegmentLED({ number, colon }) {
     return (
-        <div className="SevenSegmentLED">
-            <div className="numbers">
-                    <p>10</p>
-                    <p className="placeholder"></p>
+        <Fragment>
+            <div className={ styles.SevenSegmentLED }>
+                <p>{ number }</p>
+                <p className="placeholder" />
             </div>
-        </div>
+            { colon ? <div><p>:</p></div> : null }
+        </Fragment>
     );
 }
+
+SevenSegmentLED.propTypes = {
+    colon: PropTypes.bool
+};

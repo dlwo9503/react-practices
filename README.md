@@ -6,6 +6,7 @@
 ### 4. Flux: Redux
 ### 5. Testing(rest)
 ### 6. Perfomance
+### 7. Integration
 
 ### Kanban App [todolist]
 ### Emaillist App
