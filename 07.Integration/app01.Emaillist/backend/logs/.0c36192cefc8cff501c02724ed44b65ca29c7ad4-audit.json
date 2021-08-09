@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/jaes/vscode-projects/react-practices/07.Integration/app01.Emaillist/backend/logs/.0c36192cefc8cff501c02724ed44b65ca29c7ad4-audit.json",
+    "files": [
+        {
+            "date": 1628479493380,
+            "name": "/Users/jaes/vscode-projects/react-practices/07.Integration/app01.Emaillist/backend/logs/2021-08-09.log",
+            "hash": "bc4f557f7fa9c8250e40abd5d7aacf8d"
+        }
+    ]
+}
