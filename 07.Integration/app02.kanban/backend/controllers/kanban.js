@@ -1,13 +1,9 @@
-const model = require('../models/emaillist');
+const model = require('../models/kanban');
 
 module.exports = {
-    readAll: async function(req, res, next) {
+    readAllCards: async function(req, res, next) {
         try {
-            const results = await model.findAll();
-            // res.render('index', {
-            //     list: results || []
-            // });
-
+            const results = await model.findAllCards();
             res
                 .status(200)
                 .send({
@@ -17,6 +13,9 @@ module.exports = {
                 });
         } catch(err){
           next(err);
-        }       
-    }  
+        }
+    },
+    createTask: function(req, res, next){
+
+    }
 }
